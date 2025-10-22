@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    height: 200vh;
+    background-color: #FAF4EF;
+}
+
+
+/* START NAVBAR */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    /* background-color: red; */
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .logo a{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(172, 148, 148);
+    text-decoration: none;
+}
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(172, 148, 148);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 75%;
+    background-color: rgb(172, 148, 148);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+
+/* HOME */
+.container {            
+    height: 100vh;          
+    display: flex;    
+    flex-direction: column;     
+    justify-content: center; 
+    align-items: center;
+    margin-top: 7%;  
+}
+
+.container h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    text-align: center;
+    color: #4b3a32;
+}
+
+.container p{
+    font-size: medium;
+    margin-top: 30px;
+    text-align: center;
+    max-width: 1000px;
+    color: rgb(172, 148, 148);
+}
+
+.container button{
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #000;
+    border: none;
+}
+
+.container button:hover{
+    /* background-color: #ffffff; */
+    /* color: #4b3a32; */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* picture */
+.container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.container-2 img {
+  width: 200px;
+  /* border-radius: 10px; */
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Biar tinggi dan posisi beda-beda */
+.container-2 img:nth-child(1) {
+  height: 300px;
+  margin-top: 100px;
+}
+
+.container-2 img:nth-child(2) {
+  height: 350px;
+  margin-top: 20px;
+}
+
+.container-2 img:nth-child(3) {
+  height: 330px;
+  margin-top: 60px;
+}
+
+.container-2 img:nth-child(4) {
+  height: 300px;
+  margin-top: 40px;
+}
+
+/* Efek hover optional */
+.container-2 img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.container-3 {            
+    height: 100vh;          
+    display: flex;    
+    flex-direction: column;     
+    align-items: center;
+    margin-top: 7%;  
+}
+
+.container-3 h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    text-align: center;
+    color: #4b3a32;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5em;
+    margin: 2em 0;
+}
+
+.card-container img{
+    height: 240px;
+}
+
+.product-name {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.card-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #4b3a32;
+}
+
+.cart-button {
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: pink;
+    color: #FFFFFF;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cart-button:hover {
+    background-color: rgb(229, 174, 183);
+}
